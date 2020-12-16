@@ -1,0 +1,57 @@
+{
+  "name": "UnrulyBot",
+  "author": "gmc14",
+  "buyRules": [
+    {
+      "card": "*",
+      "score": 100
+    }
+  ],
+  "discardRules": [
+    {
+      "card": "Viper",
+      "score": 100
+    },
+    {
+      "card": "Scout",
+      "score": 100
+    },
+    {
+      "card": "Explorer",
+      "score": 100
+    }
+  ],
+  "scrapRules": [
+    {
+      "card": "Viper",
+      "score": 100
+    },
+    {
+      "card": "Scout",
+      "score": 100
+    },
+    {
+      "card": "Explorer",
+      "score": 100
+    }
+  ],
+  "scrapForBenefitRules": [
+    {
+      "card": "*",
+      "score": 100
+    }
+  ],
+  "useBaseRules": [
+    {
+      "card": "*",
+      "score": 100
+    }
+  ],
+  "playRules": [
+    {
+      "card": "*",
+      "score": 100
+    }
+  ],
+  "makeChoiceRules": []
+}
