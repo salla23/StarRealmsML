@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>940</y>
+      <width>1201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>350</y>
+      <width>1201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>590</y>
+      <width>1201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="GameLog">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>360</y>
+      <width>241</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="GameStats">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>261</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="DeckStats">
+     <attribute name="title">
+      <string>Deck Stats</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Stats">
+     <attribute name="title">
+      <string>Game Stats</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="PlayerA_HUD">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>261</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="PlayerA_CardPreview">
+     <attribute name="title">
+      <string>PlayerA_CardPreview</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="PlayerA_Strategy">
+     <attribute name="title">
+      <string>Strategy</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="PlayerB_HUD">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>610</y>
+      <width>261</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="PlayerB_CardPreview">
+     <attribute name="title">
+      <string>PlayerB_CardPreview</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="PlayerB_Strategy">
+     <attribute name="title">
+      <string>Strategy</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QScrollBar" name="GameLog_scrollBar">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>360</y>
+      <width>16</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="PlayerADeck">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>20</y>
+      <width>151</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="PlayerADeck_scrollBar">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>20</y>
+      <width>16</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="PlayerADiscard">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>210</y>
+      <width>141</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="PlayerADiscard_scrollBar">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>210</y>
+      <width>20</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>150</y>
+      <width>331</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>200</y>
+      <width>331</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>20</y>
+      <width>160</width>
+      <height>127</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="PlayerADeckStats">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Deck_size:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLCDNumber" name="lcdNumber"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Deck_gold:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_3"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Deck_attack:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_4"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Deck_defense:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_5"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>858</x>
+      <y>170</y>
+      <width>331</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="PlayerAGeneralStats">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Health:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_16"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>Deck#:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_15"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>Win?:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_17"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>220</y>
+      <width>175</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="PlayerADiscardStats">
+     <item row="1" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_6"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Discard_size:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Discard_gold:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Discard_attack:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Discard_defense: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_7"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_8"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_9"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QScrollBar" name="PlayerBDiscard_scrollBar">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>800</y>
+      <width>20</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_7">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>790</y>
+      <width>331</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>858</x>
+      <y>760</y>
+      <width>339</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="PlayerBGeneralStats">
+     <item>
+      <widget class="QLabel" name="label_38">
+       <property name="text">
+        <string>Health:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_38"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_39">
+       <property name="text">
+        <string>Deck#:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_39"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_40">
+       <property name="text">
+        <string>Win?:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_40"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="Line" name="line_8">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>740</y>
+      <width>331</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>810</y>
+      <width>175</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="PlayerBDiscardStats">
+     <item row="1" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_41"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_41">
+       <property name="text">
+        <string>Discard_size:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_42">
+       <property name="text">
+        <string>Discard_gold:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_43">
+       <property name="text">
+        <string>Discard_attack:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_44">
+       <property name="text">
+        <string>Discard_defense: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_42"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_43"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_44"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QScrollBar" name="PlayerBDeck_scrollBar">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>610</y>
+      <width>16</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="PlayerBDeck">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>610</y>
+      <width>151</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="PlayerBDiscard">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>800</y>
+      <width>141</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>610</y>
+      <width>160</width>
+      <height>127</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="PlayerBDeckStats">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_45">
+       <property name="text">
+        <string>Deck_size:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_45"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_46">
+       <property name="text">
+        <string>Deck_gold:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_46"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_47">
+       <property name="text">
+        <string>Deck_attack:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_47"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_48">
+       <property name="text">
+        <string>Deck_defense:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLCDNumber" name="lcdNumber_48"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>370</y>
+      <width>651</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="TradeRow">
+     <item>
+      <widget class="QLabel" name="TradeRowCard_1">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>TradeRowCard_1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="TradeRowCard_2">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>TradeRowCard_2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="TradeRowCard_3">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>TradeRowCard_3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="TradeRowCard_4">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>TradeRowCard_4</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="TradeRowCard_5">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>TradeRowCard_5</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>650</y>
+      <width>571</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="PlayerBHand_played">
+     <item row="1" column="3">
+      <widget class="QListWidget" name="PlayerB_actions"/>
+     </item>
+     <item row="1" column="4">
+      <widget class="QScrollBar" name="PlayerB_actions_scrollBar">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_58">
+       <property name="text">
+        <string>PlayerB Actions</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_57">
+       <property name="text">
+        <string>Bases In Play</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QListWidget" name="PlayerB_BasesInPlay"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QScrollBar" name="PlayerB_BasesInPlay_scrollBar">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>610</y>
+      <width>571</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>gold:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_14"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>attack:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_11"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>defense:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_13"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>830</y>
+      <width>571</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="PlayerBCards_unplayed">
+     <item>
+      <widget class="QListWidget" name="PlayerBCards"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>319</y>
+      <width>571</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_53">
+       <property name="text">
+        <string>gold:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_53"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_54">
+       <property name="text">
+        <string>attack:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_12"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_55">
+       <property name="text">
+        <string>defense:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_54"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_7">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>20</y>
+      <width>571</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="PlayerAHand_unplayed">
+     <item>
+      <widget class="QListWidget" name="PlayerAHand"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>140</y>
+      <width>571</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="PlayerAHand_played">
+     <item row="1" column="3">
+      <widget class="QListWidget" name="PlayerA_actions"/>
+     </item>
+     <item row="1" column="4">
+      <widget class="QScrollBar" name="PlayerA_actions_scrollBar">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_60">
+       <property name="text">
+        <string>Bases In Play</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_59">
+       <property name="text">
+        <string>PlayerA Actions</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QScrollBar" name="PlayerA_BasesInPlay_scrollBar">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QListWidget" name="PlayerA_BasesInPlay"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
